@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: ConfigMap
+data:
+  max_allowed_packet.cnf: |
+    [mysqld]
+    max_allowed_packet = 64M
