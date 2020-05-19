@@ -34,9 +34,6 @@ spec:
       volumes:
       - emptyDir: {}
         name: mariadb-volume-1
-      - configMap:
-        name: mariadb-config
-        items:
-          - key: max_allowed_packet.cnf
-            path: max_allowed_packet.cnf
-        name: mariadb-config-volume
+      - name: mariadb-config-volume
+        configMap:
+          name: mariadb-config
